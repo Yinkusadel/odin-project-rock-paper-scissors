@@ -11,10 +11,13 @@ let getComputerChoice = () => {
 
 
 
-let playerSelection = "rock";
-let computerSelection = getComputerChoice();
 
-let playRound = (playerSelection, computerSelection) => {
+
+let playRound = () => {
+
+  let playerSelection = "rock";
+  let computerSelection = getComputerChoice();
+
     if (computerSelection == "rock" && playerSelection == "rock") {
         return "it's a tie"
       } else if (computerSelection == "scissors" && playerSelection == "rock") {
@@ -29,7 +32,7 @@ let playRound = (playerSelection, computerSelection) => {
 
 let game = () => {
     for (let i = 0; i < 5; i++) {
-        console.log(playRound(playerSelection, computerSelection));
+        console.log(playRound());
       }
       
 }
