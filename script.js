@@ -3,12 +3,10 @@ let randomChoice = ""
 
 
 let getComputerChoice = () => {
-    for (let i = 0; i < choiceOptions.length; i++) {
         randomChoice = (choiceOptions[(Math.floor(Math.random() * choiceOptions.length))]);
-      }
-      return randomChoice
+        return randomChoice
+     
 }
-
 
 
 
@@ -30,6 +28,8 @@ let playRound = () => {
   }
 
 
+
+
 let game = () => {
     for (let i = 0; i < 5; i++) {
         console.log(playRound());
@@ -37,13 +37,5 @@ let game = () => {
       
 }
   
-  
 
-
-
-
-
-
-
-
-console.log(      game  ()    )
+console.log(     game()                       )
