@@ -56,6 +56,27 @@ const playRound = () => {
   return 'odd call 😬';
 };
 
+const getPlayerRock = () => {
+  playerOption.textContent = 'rock';
+  computerOption.textContent = getComputerChoice();
+  resultOutcome.textContent = playRound();
+  descriptionContent.textContent = 'Want to play new round ?';
+};
+
+const getPlayerPaper = () => {
+  playerOption.textContent = 'paper';
+  computerOption.textContent = getComputerChoice();
+  resultOutcome.textContent = playRound();
+  descriptionContent.textContent = 'Want to play new round ?';
+};
+
+const getPlayerScissors = () => {
+  playerOption.textContent = 'scissors';
+  computerOption.textContent = getComputerChoice();
+  resultOutcome.textContent = playRound();
+  descriptionContent.textContent = 'Want to play new round ?';
+};
+
 const newGame = () => {
   descriptionContent.textContent = 'Want to play a round ?';
   playerOption.textContent = '';
@@ -77,3 +98,12 @@ playRoundBtn.addEventListener('click', playerComputerChoice);
 
 const newGameBtn = document.querySelector('.refresh-game');
 newGameBtn.addEventListener('click', newGame);
+
+const playerRockBtn = document.querySelector('.rock');
+playerRockBtn.addEventListener('click', getPlayerRock);
+
+const playerScissorsBtn = document.querySelector('.scissors');
+playerScissorsBtn.addEventListener('click', getPlayerScissors);
+
+const playerPaperBtn = document.querySelector('.paper');
+playerPaperBtn.addEventListener('click', getPlayerPaper);

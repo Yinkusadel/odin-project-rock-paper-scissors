@@ -37,16 +37,16 @@
 }
 
 .players-container {
-  margin-top: 30px;
+  margin-top: 10px;
 }
 
 .result {
-  margin-top: 30px;
+  margin-top: 10px;
 }
 
 .score-board {
   display: flex;
-  margin-top: 30px;
+  margin-top: 10px;
 }
 
 .player-score-box {
@@ -88,6 +88,25 @@
 }
 
 .refresh-game:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #0a0a0a;
+  transform: translateY(4px);
+}
+
+.player-option-btn button {
+  margin: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  margin-top: 15px;
+  transition-duration: 0.4s;
+}
+
+.player-option-btn button:hover {
+  color: #d41111;
+  background-color: #867272;
+}
+
+.player-option-btn button:active {
   background-color: #3e8e41;
   box-shadow: 0 5px #0a0a0a;
   transform: translateY(4px);
