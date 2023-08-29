@@ -33,30 +33,61 @@
 }
 
 .description-content {
-  margin-top: 30px;
+  margin-top: 10px;
 }
 
 .players-container {
-  margin-top: 60px;
+  margin-top: 30px;
 }
 
 .result {
-  margin-top: 80px;
+  margin-top: 30px;
 }
 
-.new-game-btn {
+.score-board {
+  display: flex;
+  margin-top: 30px;
+}
+
+.player-score-box {
+  margin-right: 15px;
+}
+
+.computer-score-box {
+  margin-left: 15px;
+}
+
+.play-round-btn {
   padding: 10px;
   border-radius: 5px;
   margin-top: 15px;
   transition-duration: 0.4s;
 }
 
-.new-game-btn:hover {
+.play-round-btn:hover {
   color: #d41111;
   background-color: #867272;
 }
 
-.new-game-btn:active {
+.play-round-btn:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #0a0a0a;
+  transform: translateY(4px);
+}
+
+.refresh-game {
+  padding: 10px;
+  border-radius: 5px;
+  margin-top: 15px;
+  transition-duration: 0.4s;
+}
+
+.refresh-game:hover {
+  color: #d41111;
+  background-color: #867272;
+}
+
+.refresh-game:active {
   background-color: #3e8e41;
   box-shadow: 0 5px #0a0a0a;
   transform: translateY(4px);

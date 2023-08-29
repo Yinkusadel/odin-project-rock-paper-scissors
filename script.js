@@ -4,6 +4,10 @@ const playerOption = document.querySelector('.player-option');
 const computerOption = document.querySelector('.computer-option');
 const resultOutcome = document.querySelector('.result-outcome');
 const descriptionContent = document.querySelector('.description-content');
+const playerScore = document.querySelector('.player-score');
+const computerScore = document.querySelector('.computer-score');
+let playerGoal = 0;
+let computerGoal = 0;
 
 const getComputerChoice = () => {
   randomChoice = choiceOptions[Math.floor(Math.random() * choiceOptions.length)];
@@ -23,27 +27,42 @@ const playRound = () => {
   }
 
   if (player === 'rock' && computer === 'scissors') {
+    playerScore.textContent = `${(playerGoal += 1)}`;
     return 'you win! rock beats scissors 😄';
   }
   if (player === 'rock' && computer === 'paper') {
-    return 'please replay 🙃';
+    computerScore.textContent = `${(computerGoal += 1)}`;
+    return 'you lose! paper beats rock 😭';
   }
 
   if (player === 'scissors' && computer === 'paper') {
+    playerScore.textContent = `${(playerGoal += 1)}`;
     return 'you win! scissors beats paper 😄';
   }
   if (player === 'scissors' && computer === 'rock') {
-    return 'please replay 🙃';
+    computerScore.textContent = `${(computerGoal += 1)}`;
+    return 'you lose! rock beats scissors 😭';
   }
 
   if (player === 'paper' && computer === 'rock') {
+    playerScore.textContent = `${(playerGoal += 1)}`;
     return 'you win! paper beats rock 😄';
   }
   if (player === 'paper' && computer === 'scissors') {
-    return 'please replay 🙃';
+    computerScore.textContent = `${(computerGoal += 1)}`;
+    return 'you lose! scissors beats paper 😭';
   }
 
   return 'odd call 😬';
+};
+
+const newGame = () => {
+  descriptionContent.textContent = 'Want to play a round ?';
+  playerOption.textContent = '';
+  computerOption.textContent = '';
+  resultOutcome.textContent = '';
+  playerScore.textContent = `${(playerGoal = 0)}`;
+  computerScore.textContent = `${(computerGoal = 0)}`;
 };
 
 const playerComputerChoice = () => {
@@ -53,5 +72,8 @@ const playerComputerChoice = () => {
   resultOutcome.textContent = playRound();
 };
 
-const newGame = document.querySelector('.new-game-btn');
-newGame.addEventListener('click', playerComputerChoice);
+const playRoundBtn = document.querySelector('.play-round-btn');
+playRoundBtn.addEventListener('click', playerComputerChoice);
+
+const newGameBtn = document.querySelector('.refresh-game');
+newGameBtn.addEventListener('click', newGame);
