@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link href="styles.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="body-container">
+      <div class="container">
+        <h1 class="description-header">Rock Paper Scissors</h1>
+        <p class="description-content">Want to play a round ?</p>
+        <div class="players-container">
+          <div class="player-slot">
+            <div class="player-option-btn">
+              <button class="rock">rock</button><button class="paper">paper</button
+              ><button class="scissors">scissors</button>
+            </div>
+            <p>Player : <span class="player-option"> </span></p>
+          </div>
+
+          <div class="computer-slot">
+            <p>Computer : <span class="computer-option"> </span></p>
+          </div>
+        </div>
+        <div class="score-board">
+          <div class="player-score-box">
+            <p>Player</p>
+            <span class="player-score">0</span>
+          </div>
+
+          <div class="computer-score-box">
+            <p>Computer</p>
+            <span class="computer-score">0 </span>
+          </div>
+        </div>
+        <p class="result">Outcome: <span class="result-outcome"></span></p>
+        <div class="button div">
+          <button class="play-round-btn">Play random</button>
+          <button class="refresh-game">New game</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
