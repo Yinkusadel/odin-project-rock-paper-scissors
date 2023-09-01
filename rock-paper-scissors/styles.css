@@ -1,0 +1,143 @@
+html {
+  font-size: 65%;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: linear-gradient(hsl(214deg 47% 23%), hsl(237deg 49% 15%));
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  font-family: 'Barlow Semi Condensed', sans-serif;
+}
+
+.page-header {
+  border: 5px solid hsl(217deg 16% 45%);
+  border-radius: 5px;
+  padding: 1.5rem;
+  width: 80rem;
+  margin: 2rem auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: width 0.5s ease-in-out;
+}
+
+.heading-content-options {
+  color: #ddd;
+  text-transform: uppercase;
+  font-weight: 600;
+  line-height: 0.85;
+  font-size: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.header-score-box {
+  padding: 1rem 2rem;
+  background-color: #ddd;
+  text-align: center;
+  border-radius: 5px;
+}
+
+.heading-score-text {
+  text-transform: uppercase;
+  color: hsl(229deg 64% 46%);
+  font-size: 1.2rem;
+  letter-spacing: 2px;
+}
+
+.header-score {
+  color: hsl(229deg 25% 31%);
+  font-size: 4rem;
+  font-weight: 700;
+  line-height: 1;
+  transition: all 0.3s ease-in-out;
+}
+
+main {
+  position: relative;
+  margin-top: 8rem;
+}
+
+.game-body {
+  width: 80%;
+  min-height: 28rem;
+  margin: auto;
+  display: flex;
+  position: relative;
+}
+
+.svg-triangle-container {
+  margin: auto;
+}
+
+.svg-triangle {
+  position: relative;
+}
+
+.game-body-big-circle-paper-blue-border {
+  width: 13rem;
+  height: 13rem;
+  border: 30px solid #546de7;
+  border-radius: 50%;
+  top: -6.5rem;
+  left: 30%;
+  position: absolute;
+  box-shadow: 0 3px 3px rgb(0 0 0 / 25%);
+}
+
+.game-body-big-circle-paper-white-background {
+  background-color: white;
+  width: 13rem;
+  height: 13rem;
+  border-radius: 50%;
+  box-shadow: 0 3px 3px rgb(0 0 0 / 25%);
+  border-top: 2px solid #bfbfbf;
+}
+
+.game-body-big-circle-scissors-yellow-border {
+  width: 13rem;
+  height: 13rem;
+  border: 30px solid #ec9e0e;
+  border-radius: 50%;
+  top: -6.5rem;
+  right: 30%;
+  position: absolute;
+  box-shadow: 0 3px 3px rgb(0 0 0 / 25%);
+}
+
+.game-body-big-circle-scissors-white-background {
+  background-color: white;
+  width: 13rem;
+  height: 13rem;
+  border-radius: 50%;
+  box-shadow: 0 3px 3px rgb(0 0 0 / 25%);
+  border-top: 2px solid #bfbfbf;
+}
+
+.game-body-big-circle-rock-yellow-border {
+  width: 13rem;
+  height: 13rem;
+  border: 30px solid #dc2e4e;
+  border-radius: 50%;
+  top: 15rem;
+  right: 40%;
+  position: absolute;
+  box-shadow: 0 3px 3px rgb(0 0 0 / 25%);
+}
+
+.game-body-big-circle-rock-white-background {
+  background-color: white;
+  width: 13rem;
+  height: 13rem;
+  border-radius: 50%;
+  box-shadow: 0 3px 3px rgb(0 0 0 / 25%);
+  border-top: 2px solid #bfbfbf;
+}
+
+.option-icon {
+  position: absolute;
+  left: 30%;
+  top: 25%;
+}
