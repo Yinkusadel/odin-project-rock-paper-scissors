@@ -92,6 +92,10 @@ main {
   transition-duration: 0.4s;
 }
 
+.game-body-big-circle-paper-blue-border:not(:hover) {
+  transition-duration: 0.4s;
+}
+
 .game-body-big-circle-paper-white-background {
   background-color: white;
   width: 13rem;
@@ -117,6 +121,10 @@ main {
   transition-duration: 0.4s;
 }
 
+.game-body-big-circle-scissors-yellow-border:not(:hover) {
+  transition-duration: 0.4s;
+}
+
 .game-body-big-circle-scissors-white-background {
   background-color: white;
   width: 13rem;
@@ -139,6 +147,10 @@ main {
 
 .game-body-big-circle-rock-red-border:hover {
   transform: scale(1.2);
+  transition-duration: 0.4s;
+}
+
+.game-body-big-circle-rock-red-border:not(:hover) {
   transition-duration: 0.4s;
 }
 
