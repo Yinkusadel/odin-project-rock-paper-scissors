@@ -67,7 +67,7 @@ main {
   min-height: 28rem;
   margin: auto;
   /* display: flex; */ /* this display is before player picks option */
-  display: none; /* this display is after player picks option */
+  display: flex; /* this display is after player picks option */
   position: relative;
 }
 
@@ -226,6 +226,7 @@ main {
   min-height: 28rem;
   margin: auto;
   color: #dc2e4e;
+  display: none;
 }
 
 .after-player-and-computer-choice-game {
