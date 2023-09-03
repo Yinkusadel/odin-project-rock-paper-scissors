@@ -343,7 +343,27 @@ main {
 
 
 
+.game-body-big-circle-container-paper-text-player {
+  display: none;
+}
 
+.game-body-big-circle-container-rock-text-player {
+  display: none;
+}
 
+.game-body-big-circle-container-scissors-text-player {
+  display: none;
+}
 
+.game-body-big-circle-container-paper-text-computer {
+  display: none;
+}
+
+.game-body-big-circle-container-rock-text-computer {
+  display: none;
+}
+
+.game-body-big-circle-container-scissors-text-computer {
+  display: none;
+}
 
