@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&family=Inter:wght@300;400;500;600;700&display=swap');
+
 html {
   font-size: 65%;
   box-sizing: border-box;
@@ -64,7 +66,8 @@ main {
   width: 80%;
   min-height: 28rem;
   margin: auto;
-  display: flex;
+  /* display: flex; */ /* this display is before player picks option */
+  display: none; /* this display is after player picks option */
   position: relative;
 }
 
@@ -84,7 +87,7 @@ main {
   top: -6.5rem;
   left: 30%;
   position: absolute;
-  box-shadow: 0 3px 3px rgb(0 0 0 / 25%);
+  box-shadow: 0 5px 0 #042beee1;
 }
 
 .game-body-big-circle-paper-blue-border:hover {
@@ -113,7 +116,7 @@ main {
   top: -6.5rem;
   right: 30%;
   position: absolute;
-  box-shadow: 0 3px 3px rgb(0 0 0 / 25%);
+  box-shadow: 0 5px 0 #805c1f;
 }
 
 .game-body-big-circle-scissors-yellow-border:hover {
@@ -142,7 +145,7 @@ main {
   top: 15rem;
   right: 40%;
   position: absolute;
-  box-shadow: 0 3px 3px rgb(0 0 0 / 25%);
+  box-shadow: 0 5px 0 #b11431;
 }
 
 .game-body-big-circle-rock-red-border:hover {
@@ -170,7 +173,8 @@ main {
 }
 
 .rules-btn-container {
-  margin: 100px 0 50px;
+  /* margin: 100px 0 50px; */ /* this display is for before player picks option */
+  margin: 100px 0 50px; /* this display is after player picks option */
   display: flex;
   justify-content: flex-end;
   padding-right: 20px;
@@ -215,3 +219,130 @@ main {
   margin-bottom: 280px;
   position: absolute;
 }
+
+/* this should display when user has picked option  */
+.after-player-and-computer-choice-game-container {
+  width: 80%;
+  min-height: 28rem;
+  margin: auto;
+  color: #dc2e4e;
+}
+
+.after-player-and-computer-choice-game {
+  width: 90%;
+  min-height: 28rem;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/*                     player picked container style starts here                 */
+
+.player-picked-container {
+  width: 35%;
+  min-height: 28rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.game-body-big-circle-player-option-border {
+  width: 20rem;
+  height: 20rem;
+  border: 30px solid #dc2e4e;
+  border-radius: 50%;
+  box-shadow: 0 5px 0 #bb2424e1;
+}
+
+.game-body-big-circle-player-option-white-background {
+  background-color: white;
+  width: 20rem;
+  height: 20rem;
+  border-radius: 50%;
+  box-shadow: 0 3px 3px rgb(0 0 0 / 25%);
+  border-top: 2px solid #bfbfbf;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.player-option-svg {
+  display: none;
+}
+
+/*                player picked container style ends here                    */
+
+.display-winner-win-or-lose-content {
+  width: 30%;
+  min-height: 28rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 6rem;
+  font-weight: bold;
+  color: white;
+}
+
+.win-lose-text {
+  padding: 0;
+  margin: 0;
+  font-family: 'Barlow Semi Condensed', sans-serif;
+}
+
+.play-again {
+  margin-top: 10px;
+  padding: 15px 90px;
+  border-radius: 10px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  transition: all 0.4s ease-in-out;
+  transition-duration: 0.4s;
+  border: none;
+  color: #28466d;
+}
+
+/*                computer picked container style starts here                    */
+
+.computer-picked-container {
+  width: 35%;
+  min-height: 28rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.game-body-big-circle-computer-option-border {
+  width: 20rem;
+  height: 20rem;
+  border: 30px solid #cbdc2e;
+  border-radius: 50%;
+  box-shadow: 0 5px 0 #889421;
+}
+
+.game-body-big-circle-computer-option-white-background{
+  background-color: white;
+  width: 20rem;
+  height: 20rem;
+  border-radius: 50%;
+  border-top: 2px solid #bfbfbf;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.computer-option-svg {
+  display: none;
+}
+
+/*                computer picked container style ends here                    */
+
+
+
+
+
+
+
