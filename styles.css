@@ -35,21 +35,55 @@ body {
   flex-direction: column;
 }
 
-.header-score-box {
+.score-container {
+  display: flex;
+  width: 30rem;
+}
+
+.header-score-box-player {
   padding: 1rem 2rem;
   background-color: #ddd;
   text-align: center;
   border-radius: 5px;
+  margin-right: 5px;
+  width: 15rem;
 }
 
-.heading-score-text {
+.heading-score-text-player {
   text-transform: uppercase;
   color: hsl(229deg 64% 46%);
-  font-size: 1.2rem;
+  font-size: 2rem;
   letter-spacing: 2px;
 }
 
-.header-score {
+.header-score-player {
+  color: hsl(229deg 25% 31%);
+  font-size: 4rem;
+  font-weight: 700;
+  line-height: 1;
+  transition: all 0.3s ease-in-out;
+}
+
+.header-score-box-computer {
+  padding: 1rem 2rem;
+  background-color: #ddd;
+  text-align: center;
+  border-radius: 5px;
+  margin-left: 5px;
+  width: 15rem;
+}
+
+.heading-score-text-computer {
+  text-transform: uppercase;
+  color: hsl(229deg 64% 46%);
+  font-size: 2rem;
+  letter-spacing: 2px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.header-score-computer {
   color: hsl(229deg 25% 31%);
   font-size: 4rem;
   font-weight: 700;
@@ -66,7 +100,11 @@ main {
   width: 80%;
   min-height: 28rem;
   margin: auto;
-  /* display: flex; */ /* this display is before player picks option */
+
+  /* display: flex; */
+
+  /* this display is before player picks option */
+
   display: flex; /* this display is after player picks option */
   position: relative;
 }
@@ -173,7 +211,9 @@ main {
 }
 
 .rules-btn-container {
-  /* margin: 100px 0 50px; */ /* this display is for before player picks option */
+  /* margin: 100px 0 50px; */
+
+  /* this display is for before player picks option */
   margin: 100px 0 50px; /* this display is after player picks option */
   display: flex;
   justify-content: flex-end;
@@ -324,7 +364,7 @@ main {
   box-shadow: 0 5px 0 #889421;
 }
 
-.game-body-big-circle-computer-option-white-background{
+.game-body-big-circle-computer-option-white-background {
   background-color: white;
   width: 20rem;
   height: 20rem;
@@ -340,8 +380,6 @@ main {
 }
 
 /*                computer picked container style ends here                    */
-
-
 
 .game-body-big-circle-container-paper-text-player {
   display: none;
@@ -366,4 +404,3 @@ main {
 .game-body-big-circle-container-scissors-text-computer {
   display: none;
 }
-
