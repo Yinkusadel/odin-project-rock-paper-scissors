@@ -27,19 +27,37 @@ const headerScore = document.querySelector('.header-score');
 const winLoseText = document.querySelector('.win-lose-text');
 let goal = 0
 
+
 let a = document.getElementById("game-body-big-circle-computer-option-border");
 let b = document.getElementById("game-body-big-circle-computer-option-border");
-let c = document.getElementById("computer-option-svg-computer-rock");
-let d = document.getElementById("computer-option-svg-computer-scissors");
-let e = document.getElementById("computer-option-svg-computer-paper");
+let r = document.getElementById("computer-option-svg-computer-rock");
+let s = document.getElementById("computer-option-svg-computer-scissors");
+let p = document.getElementById("computer-option-svg-computer-paper");
 
 
-const changeCom = () => {
+const changeComRock = () => {
   a.style.border = "30px solid #dc2e4e";
   b.style.boxShadow = "0 5px 0 #bb2424e1";
-  c.style.display = "block";
-  d.style.display = "none";
-  e.style.display = "none";
+  r.style.display = "block";
+  p.style.display = "none";
+  s.style.display = "none";
+};
+
+
+const changeComPaper = () => {
+  a.style.border = "30px solid #546de7";
+  b.style.boxShadow = "0 5px 0 #042beee1";
+  p.style.display = "block";
+  r.style.display = "none";
+  s.style.display = "none";
+};
+
+const changeComScissors = () => {
+  a.style.border = "30px solid #cbdc2e";
+  b.style.boxShadow = "0 5px 0 #889421";
+  s.style.display = "block";
+  r.style.display = "none";
+  p.style.display = "none";
 };
 
 const getComputerChoice = () => {
@@ -47,33 +65,26 @@ const getComputerChoice = () => {
   return randomChoice;
 };
 
-
-
-
-
 const playRoundForPaper = () => {
   const player = gameBodyPaperTextPlayer.textContent;
   const computer = gameBodyPaperTextComputer.textContent;
 
   if ( (player === 'paper' && computer === 'paper') )
    {
+    changeComPaper ()
     return "DRAW";
   }
 
   if (player === 'paper' && computer === 'rock') {
-    // document.getElementById("game-body-big-circle-computer-option-border").style.border = "30px solid #dc2e4e";
-    // document.getElementById("game-body-big-circle-computer-option-border").style.boxShadow = "0 5px 0 #bb2424e1";
-    // document.getElementById("computer-option-svg-computer-rock").style.display = "block";
-    // document.getElementById("computer-option-svg-computer-scissors").style.display = "none";
-    // document.getElementById("computer-option-svg-computer-paper").style.display = "none";
-    changeCom();
-    // headerScore.textContent = `${(goal += 1)}`;
-    //  'YOU WIN';
+    changeComRock ()
+    headerScore.textContent = `${(goal += 1)}`;
+    return 'YOU WIN';
   }
 
 
 
   if (player === 'paper' && computer === 'scissors') {
+    changeComScissors ()
     headerScore.textContent = `${(goal -= 1)}`;
     return 'YOU LOSE';
   }
@@ -81,7 +92,6 @@ const playRoundForPaper = () => {
   return 'odd call 😬';
 };
 
-console.log (playRoundForPaper())
 
 const playRoundForRock = () => {
   const player = gameBodyRockTextPlayer.textContent;
@@ -90,14 +100,17 @@ const playRoundForRock = () => {
   if (
     (player === 'rock' && computer === 'rock') ) 
     {
+      changeComRock ()
     return "DRAW";
   }
 
   if (player === 'rock' && computer === 'scissors') {
+    changeComScissors ()
     headerScore.textContent = `${(goal += 1)}`;
     return 'YOU WIN';
   }
   if (player === 'rock' && computer === 'paper') {
+    changeComPaper ()
     headerScore.textContent = `${(goal -= 1)}`;
     return 'YOU LOSE';
   }
@@ -111,14 +124,17 @@ const playRoundForScissors = () => {
 
   if ( (player === 'scissors' && computer === 'scissors') ) 
   {
+    changeComScissors ()
     return "DRAW";
   }
 
   if (player === 'scissors' && computer === 'paper') {
     headerScore.textContent = `${(goal += 1)}`;
+    changeComPaper ()
     return 'YOU WIN';
   }
   if (player === 'scissors' && computer === 'rock') {
+    changeComRock ()
     headerScore.textContent = `${(goal -= 1)}`;
     return 'YOU LOSE';
   }
@@ -127,9 +143,15 @@ const playRoundForScissors = () => {
 };
 
 
+
+
+
+
 let getPlayerRock = () => {
   gameBodyRockTextPlayer.textContent = 'rock';
   gameBodyRockTextComputer.textContent = getComputerChoice();
+
+
   gameBodyDiv.style.display = 'none';
   afterPlayerComputerChoiceDiv.style.display = 'block';
   document.getElementById("game-body-big-circle-player-option-border").style.border = "30px solid #dc2e4e";
@@ -137,7 +159,8 @@ let getPlayerRock = () => {
   document.getElementById("player-option-svg-player-rock").style.display = "block";
   document.getElementById("player-option-svg-player-scissors").style.display = "none";
   document.getElementById("player-option-svg-player-paper").style.display = "none";
-  winLoseText.textContent = playRoundForRock ()
+  winLoseText.textContent = playRoundForRock ();
+
 
 };
 
