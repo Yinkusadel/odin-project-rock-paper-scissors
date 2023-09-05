@@ -17,7 +17,7 @@ body {
   border: 5px solid hsl(217deg 16% 45%);
   border-radius: 5px;
   padding: 1.5rem;
-  width: 80rem;
+  width: 80%;
   margin: 2rem auto;
   display: flex;
   justify-content: space-between;
@@ -33,24 +33,23 @@ body {
   font-size: 2rem;
   display: flex;
   flex-direction: column;
+  width: 25%;
 }
 
 .score-container {
   display: flex;
-  width: 30rem;
+  width: 50%;
 }
 
 .header-score-box-player {
-  padding: 1rem 2rem;
   background-color: #ddd;
   text-align: center;
   border-radius: 5px;
   margin-right: 5px;
-  width: 15rem;
+  width: 50%;
 }
 
 .heading-score-text-player {
-  text-transform: uppercase;
   color: hsl(229deg 64% 46%);
   font-size: 2rem;
   letter-spacing: 2px;
@@ -65,22 +64,17 @@ body {
 }
 
 .header-score-box-computer {
-  padding: 1rem 2rem;
   background-color: #ddd;
   text-align: center;
   border-radius: 5px;
   margin-left: 5px;
-  width: 15rem;
+  width: 50%;
 }
 
 .heading-score-text-computer {
-  text-transform: uppercase;
   color: hsl(229deg 64% 46%);
   font-size: 2rem;
   letter-spacing: 2px;
-  display: flex;
-  flex-direction: column;
-  text-align: center;
 }
 
 .header-score-computer {
@@ -107,14 +101,22 @@ main {
 
   display: flex; /* this display is after player picks option */
   position: relative;
+  justify-content: center;
+  align-items: center;
 }
 
 .svg-triangle-container {
   margin: auto;
+  position: absolute;
 }
 
 .svg-triangle {
   position: relative;
+}
+
+.game-body-big-circle-container-rock {
+  background-color: orange;
+  width: 30%;
 }
 
 .game-body-big-circle-paper-blue-border {
@@ -123,7 +125,7 @@ main {
   border: 30px solid #546de7;
   border-radius: 50%;
   top: -6.5rem;
-  left: 30%;
+  left: -20%;
   position: absolute;
   box-shadow: 0 5px 0 #042beee1;
 }
@@ -152,7 +154,7 @@ main {
   border: 30px solid #ec9e0e;
   border-radius: 50%;
   top: -6.5rem;
-  right: 30%;
+  right: -20%;
   position: absolute;
   box-shadow: 0 5px 0 #805c1f;
 }
@@ -181,7 +183,7 @@ main {
   border: 30px solid #dc2e4e;
   border-radius: 50%;
   top: 15rem;
-  right: 40%;
+  right: 17%;
   position: absolute;
   box-shadow: 0 5px 0 #b11431;
 }
@@ -234,15 +236,14 @@ main {
 
 .display-rules {
   position: fixed;
-  left: 33.5%;
+  left: 15%;
+  right: 15%;
   top: 25%;
-  width: 30%;
   height: 60%;
   background-color: #eee;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-around;
   padding: 2rem;
   transition: all 0.5s ease-out;
   border-radius: 10px;
@@ -262,20 +263,22 @@ main {
 
 /* this should display when user has picked option  */
 .after-player-and-computer-choice-game-container {
-  width: 80%;
+  width: 70%;
   min-height: 28rem;
   margin: auto;
   color: #dc2e4e;
   display: none;
+  position: relative;
 }
 
 .after-player-and-computer-choice-game {
-  width: 90%;
+  width: 100%;
   min-height: 28rem;
   margin: auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: absolute;
 }
 
 /*                     player picked container style starts here                 */
@@ -287,20 +290,22 @@ main {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  position: relative;
 }
 
 .game-body-big-circle-player-option-border {
-  width: 20rem;
-  height: 20rem;
+  width: 50%;
+  height: 50%;
   border: 30px solid #dc2e4e;
   border-radius: 50%;
   box-shadow: 0 5px 0 #bb2424e1;
+  position: absolute;
 }
 
 .game-body-big-circle-player-option-white-background {
   background-color: white;
-  width: 20rem;
-  height: 20rem;
+  width: 100%;
+  height: 100%;
   border-radius: 50%;
   box-shadow: 0 3px 3px rgb(0 0 0 / 25%);
   border-top: 2px solid #bfbfbf;
@@ -322,20 +327,24 @@ main {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: 6rem;
+  font-size: 4rem;
   font-weight: bold;
   color: white;
+  position: relative;
 }
 
 .win-lose-text {
   padding: 0;
   margin: 0;
   font-family: 'Barlow Semi Condensed', sans-serif;
+  width: 80%;
+  text-align: center;
 }
 
 .play-again {
   margin-top: 10px;
-  padding: 15px 90px;
+  padding: 15px 0;
+  width: 80%;
   border-radius: 10px;
   font-size: 1.5rem;
   font-weight: bold;
@@ -354,20 +363,22 @@ main {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  position: relative;
 }
 
 .game-body-big-circle-computer-option-border {
-  width: 20rem;
-  height: 20rem;
+  width: 50%;
+  height: 50%;
   border: 30px solid #cbdc2e;
   border-radius: 50%;
   box-shadow: 0 5px 0 #889421;
+  position: absolute;
 }
 
 .game-body-big-circle-computer-option-white-background {
   background-color: white;
-  width: 20rem;
-  height: 20rem;
+  width: 100%;
+  height: 100%;
   border-radius: 50%;
   border-top: 2px solid #bfbfbf;
   display: flex;
