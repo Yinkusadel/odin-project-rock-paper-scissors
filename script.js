@@ -39,35 +39,159 @@ const winLoseText = document.querySelector('.win-lose-text');
 let playerGoal = 0;
 let computerGoal = 0;
 
-const a = document.getElementById('game-body-big-circle-computer-option-border');
-const b = document.getElementById('game-body-big-circle-computer-option-border');
-const r = document.getElementById('computer-option-svg-computer-rock');
-const s = document.getElementById('computer-option-svg-computer-scissors');
-const p = document.getElementById('computer-option-svg-computer-paper');
+
+
+
+
 
 const changeComRock = () => {
-  a.style.border = '30px solid #dc2e4e';
-  b.style.boxShadow = '0 5px 0 #bb2424e1';
-  r.style.display = 'block';
-  p.style.display = 'none';
-  s.style.display = 'none';
-};
+  let compDivBigCircle = document.getElementById("game-body-big-circle-computer-option-border");
+  let compDivBigSvgRock = document.getElementById("computer-option-svg-computer-rock");
+  let compDivBigSvgScissors = document.getElementById("computer-option-svg-computer-scissors");
+  let compDivBigSvgPaper = document.getElementById("computer-option-svg-computer-paper");
+
+
+  compDivBigCircle.classList.remove("game-body-big-circle-computer-option-border")
+  compDivBigSvgScissors.classList.remove("computer-option-svg-computer-scissors")
+  compDivBigSvgPaper.classList.remove("computer-option-svg-computer-paper")
+
+  compDivBigCircle.classList.add("change-com-rock-circle-border")
+  compDivBigSvgRock.classList.add("change-com-rock-svg")
+  compDivBigSvgScissors.classList.add("change-com-rock-remove-scissors-svg")
+  compDivBigSvgPaper.classList.add("change-com-rock-remove-paper-svg")
+
+} 
 
 const changeComPaper = () => {
-  a.style.border = '30px solid #546de7';
-  b.style.boxShadow = '0 5px 0 #042beee1';
-  p.style.display = 'block';
-  r.style.display = 'none';
-  s.style.display = 'none';
-};
+  let compDivBigCircle = document.getElementById("game-body-big-circle-computer-option-border");
+  let compDivBigSvgRock = document.getElementById("computer-option-svg-computer-rock");
+  let compDivBigSvgScissors = document.getElementById("computer-option-svg-computer-scissors");
+  let compDivBigSvgPaper = document.getElementById("computer-option-svg-computer-paper");
+
+
+  compDivBigCircle.classList.remove("game-body-big-circle-computer-option-border")
+  compDivBigSvgRock.classList.remove("computer-option-svg-computer-rock")
+  compDivBigSvgScissors.classList.remove("computer-option-svg-computer-scissors")
+
+  compDivBigCircle.classList.add("change-com-paper-circle-border")
+  compDivBigSvgRock.classList.add("change-com-paper-remove-rock-svg")
+  compDivBigSvgScissors.classList.add("change-com-paper-remove-scissors-svg")
+  compDivBigSvgPaper.classList.add("change-com-paper-svg")
+
+} 
 
 const changeComScissors = () => {
-  a.style.border = '30px solid #cbdc2e';
-  b.style.boxShadow = '0 5px 0 #889421';
-  s.style.display = 'block';
-  r.style.display = 'none';
-  p.style.display = 'none';
-};
+  let compDivBigCircle = document.getElementById("game-body-big-circle-computer-option-border");
+  let compDivBigSvgRock = document.getElementById("computer-option-svg-computer-rock");
+  let compDivBigSvgScissors = document.getElementById("computer-option-svg-computer-scissors");
+  let compDivBigSvgPaper = document.getElementById("computer-option-svg-computer-paper");
+
+
+  compDivBigCircle.classList.remove("game-body-big-circle-computer-option-border")
+  compDivBigSvgRock.classList.remove("computer-option-svg-computer-rock")
+  compDivBigSvgPaper.classList.remove("computer-option-svg-computer-paper")
+
+  compDivBigCircle.classList.add("change-com-scissors-circle-border")
+  compDivBigSvgRock.classList.add("change-com-scissors-remove-rock-svg")
+  compDivBigSvgScissors.classList.add("change-com-scissors-svg")
+  compDivBigSvgPaper.classList.add("change-com-scissors-remove-paper-svg")
+
+} 
+
+
+
+
+
+
+
+
+
+
+const changePlayerRock = () => {
+  let playerDivBigCircle = document.getElementById("game-body-big-circle-player-option-border");
+  let playerDivBigSvgRock = document.getElementById("player-option-svg-player-rock");
+  let playerDivBigSvgScissors = document.getElementById("player-option-svg-player-scissors");
+  let playerDivBigSvgPaper = document.getElementById("player-option-svg-player-paper");
+
+
+  playerDivBigCircle.classList.remove("game-body-big-circle-player-option-border")
+  playerDivBigSvgScissors.classList.remove("player-option-svg-player-scissors")
+  playerDivBigSvgPaper.classList.remove("player-option-svg-player-paper")
+
+  playerDivBigCircle.classList.add("change-player-rock-circle-border")
+  playerDivBigSvgRock.classList.add("change-player-rock-svg")
+  playerDivBigSvgScissors.classList.add("change-player-rock-remove-scissors-svg")
+  playerDivBigSvgPaper.classList.add("change-player-rock-remove-paper-svg")
+
+} 
+
+const changePlayerScissors = () => {
+  let playerDivBigCircle = document.getElementById("game-body-big-circle-player-option-border");
+  let playerDivBigSvgRock = document.getElementById("player-option-svg-player-rock");
+  let playerDivBigSvgScissors = document.getElementById("player-option-svg-player-scissors");
+  let playerDivBigSvgPaper = document.getElementById("player-option-svg-player-paper");
+
+
+  playerDivBigCircle.classList.remove("game-body-big-circle-player-option-border")
+  playerDivBigSvgRock.classList.remove("player-option-svg-player-rock")
+  playerDivBigSvgPaper.classList.remove("player-option-svg-player-paper")
+
+  playerDivBigCircle.classList.add("change-player-scissors-circle-border")
+  playerDivBigSvgRock.classList.add("change-player-scissors-remove-rock-svg")
+  playerDivBigSvgScissors.classList.add("change-player-scissors-svg")
+  playerDivBigSvgPaper.classList.add("change-player-scissors-remove-paper-svg")
+
+} 
+
+const changePlayerPaper = () => {
+  let playerDivBigCircle = document.getElementById("game-body-big-circle-player-option-border");
+  let playerDivBigSvgRock = document.getElementById("player-option-svg-player-rock");
+  let playerDivBigSvgScissors = document.getElementById("player-option-svg-player-scissors");
+  let playerDivBigSvgPaper = document.getElementById("player-option-svg-player-paper");
+
+
+  playerDivBigCircle.classList.remove("game-body-big-circle-player-option-border")
+  playerDivBigSvgRock.classList.remove("player-option-svg-player-rock")
+  playerDivBigSvgScissors.classList.remove("player-option-svg-computer-scissors")
+
+  playerDivBigCircle.classList.add("change-player-paper-circle-border")
+  playerDivBigSvgRock.classList.add("change-player-paper-remove-rock-svg")
+  playerDivBigSvgScissors.classList.add("change-player-paper-remove-scissors-svg")
+  playerDivBigSvgPaper.classList.add("change-player-paper-svg")
+
+} 
+
+
+
+// const a = document.getElementById('game-body-big-circle-computer-option-border');
+// const b = document.getElementById('game-body-big-circle-computer-option-border');
+// const r = document.getElementById('computer-option-svg-computer-rock');
+// const s = document.getElementById('computer-option-svg-computer-scissors');
+// const p = document.getElementById('computer-option-svg-computer-paper');
+
+// const changeComRock = () => {
+//   a.style.border = '30px solid #dc2e4e';
+//   b.style.boxShadow = '0 5px 0 #bb2424e1';
+//   r.style.display = 'block';
+//   p.style.display = 'none';
+//   s.style.display = 'none';
+// };
+
+// const changeComPaper = () => {
+//   a.style.border = '30px solid #546de7';
+//   b.style.boxShadow = '0 5px 0 #042beee1';
+//   p.style.display = 'block';
+//   r.style.display = 'none';
+//   s.style.display = 'none';
+// };
+
+// const changeComScissors = () => {
+//   a.style.border = '30px solid #cbdc2e';
+//   b.style.boxShadow = '0 5px 0 #889421';
+//   s.style.display = 'block';
+//   r.style.display = 'none';
+//   p.style.display = 'none';
+// };
 
 const getComputerChoice = () => {
   randomChoice = choiceOptions[Math.floor(Math.random() * choiceOptions.length)];

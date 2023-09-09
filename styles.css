@@ -415,3 +415,140 @@ main {
 .game-body-big-circle-container-scissors-text-computer {
   display: none;
 }
+
+/*  class to overide via class list */
+
+/* rock start */
+.change-com-rock-circle-border {
+  border: 30px solid #dc2e4e;
+  box-shadow: 0 5px 0 #bb2424e1;
+  width: 50%;
+  height: 50%;
+  border-radius: 50%;
+  position: absolute;
+}
+
+.change-com-rock-svg {
+  display: block;
+}
+
+.change-com-rock-remove-scissors-svg {
+  display: none;
+}
+
+.change-com-rock-remove-paper-svg {
+  display: none;
+}
+
+.change-player-rock-circle-border {
+  border: 30px solid #dc2e4e;
+  box-shadow: 0 5px 0 #bb2424e1;
+  width: 50%;
+  height: 50%;
+  border-radius: 50%;
+  position: absolute;
+}
+
+.change-player-rock-svg {
+  display: block;
+}
+
+.change-player-rock-remove-scissors-svg {
+  display: none;
+}
+
+.change-player-rock-remove-paper-svg {
+  display: none;
+}
+
+/* rock ends */
+
+/* paper starts  */
+
+.change-com-paper-circle-border {
+  border: 30px solid #546de7;
+  box-shadow: 0 5px 0 #042beee1;
+  width: 50%;
+  height: 50%;
+  border-radius: 50%;
+  position: absolute;
+}
+
+.change-com-paper-svg {
+  display: block;
+}
+
+.change-com-paper-remove-scissors-svg {
+  display: none;
+}
+
+.change-com-paper-remove-rock-svg {
+  display: none;
+}
+
+.change-player-paper-circle-border {
+  border: 30px solid #546de7;
+  box-shadow: 0 5px 0 #042beee1;
+  width: 50%;
+  height: 50%;
+  border-radius: 50%;
+  position: absolute;
+}
+
+.change-player-paper-svg {
+  display: block;
+}
+
+.change-player-paper-remove-scissors-svg {
+  display: none;
+}
+
+.change-player-paper-remove-rock-svg {
+  display: none;
+}
+
+/*  paper ends */
+
+/*  scissors starts  */
+
+.change-com-scissors-circle-border {
+  border: 30px solid #cbdc2e;
+  box-shadow: 0 5px 0 #889421;
+  width: 50%;
+  height: 50%;
+  border-radius: 50%;
+  position: absolute;
+}
+
+.change-com-scissors-svg {
+  display: block;
+}
+
+.change-com-scissors-remove-paper-svg {
+  display: none;
+}
+
+.change-com-scissors-remove-rock-svg {
+  display: none;
+}
+
+.change-player-scissors-circle-border {
+  border: 30px solid #cbdc2e;
+  box-shadow: 0 5px 0 #889421;
+  width: 50%;
+  height: 50%;
+  border-radius: 50%;
+  position: absolute;
+}
+
+.change-player-scissors-svg {
+  display: block;
+}
+
+.change-player-scissors-remove-paper-svg {
+  display: none;
+}
+
+.change-player-scissors-remove-rock-svg {
+  display: none;
+}
