@@ -42,6 +42,48 @@ const gameBodyBigCirclePlayerOptionBorder = document.querySelector(
   '.game-body-big-circle-player-option-border',
 );
 
+const playerComputerOptionTextContainer = document.querySelector(
+  '.player-computer-option-text-containner',
+);
+
+const playerOptionText = document.querySelector(
+  '.player-option-text',
+);
+
+const computerOptionText = document.querySelector(
+  '.computer-option-text',
+);
+
+const playerRockTextContent = () => {
+  playerOptionText.textContent = "Rock"
+  playerComputerOptionTextContainer.classList.remove("d-none")
+}
+
+const playerPaperTextContent = () => {
+  playerOptionText.textContent = "Paper"
+  playerComputerOptionTextContainer.classList.remove("d-none")
+}
+
+const playerScissorsTextContent = () => {
+  playerOptionText.textContent = "Scissors"
+  playerComputerOptionTextContainer.classList.remove("d-none")
+}
+
+const computerRockTextContent = () => {
+  computerOptionText.textContent = "Rock"
+  playerComputerOptionTextContainer.classList.remove("d-none")
+}
+
+const computerPaperTextContent = () => {
+  computerOptionText.textContent = "Paper"
+  playerComputerOptionTextContainer.classList.remove("d-none")
+}
+
+const computerScissorsTextContent = () => {
+  computerOptionText.textContent = "Scissors"
+  playerComputerOptionTextContainer.classList.remove("d-none")
+}
+
 const choiceOptions = ['rock', 'paper', 'scissors'];
 let randomChoice = '';
 const playerScore = document.querySelector('.header-score-player');
@@ -79,17 +121,23 @@ const playRoundForPaper = () => {
   const computer = gameBodyPaperTextComputer.textContent;
 
   if (player === 'paper' && computer === 'paper') {
+    playerPaperTextContent();
+    computerPaperTextContent();
     changeComPaper();
     return 'DRAW';
   }
 
   if (player === 'paper' && computer === 'rock') {
+    playerPaperTextContent();
+    computerRockTextContent();
     changeComRock();
     playerScore.textContent = `${(playerGoal += 1)}`;
     return 'YOU WIN';
   }
 
   if (player === 'paper' && computer === 'scissors') {
+    playerPaperTextContent();
+    computerScissorsTextContent();
     changeComScissors();
     computerScore.textContent = `${(computerGoal += 1)}`;
     return 'YOU LOSE';
@@ -103,16 +151,22 @@ const playRoundForRock = () => {
   const computer = gameBodyRockTextComputer.textContent;
 
   if (player === 'rock' && computer === 'rock') {
+    playerRockTextContent();
+    computerRockTextContent();
     changeComRock();
     return 'DRAW';
   }
 
   if (player === 'rock' && computer === 'scissors') {
+    playerRockTextContent();
+    computerScissorsTextContent();
     changeComScissors();
     playerScore.textContent = `${(playerGoal += 1)}`;
     return 'YOU WIN';
   }
   if (player === 'rock' && computer === 'paper') {
+    playerRockTextContent()
+    computerPaperTextContent();
     changeComPaper();
     computerScore.textContent = `${(computerGoal += 1)}`;
     return 'YOU LOSE';
@@ -126,16 +180,22 @@ const playRoundForScissors = () => {
   const computer = gameBodyScissorsTextComputer.textContent;
 
   if (player === 'scissors' && computer === 'scissors') {
+    playerScissorsTextContent();
+    computerScissorsTextContent();
     changeComScissors();
     return 'DRAW';
   }
 
   if (player === 'scissors' && computer === 'paper') {
     playerScore.textContent = `${(playerGoal += 1)}`;
+    playerScissorsTextContent();
+    computerPaperTextContent();
     changeComPaper();
     return 'YOU WIN';
   }
   if (player === 'scissors' && computer === 'rock') {
+    playerScissorsTextContent();
+    computerRockTextContent();
     changeComRock();
     computerScore.textContent = `${(computerGoal += 1)}`;
     return 'YOU LOSE';
@@ -187,6 +247,7 @@ const getPlayerPaper = () => {
 const playAgain = () => {
   gameBodyDiv.style.display = 'flex';
   afterPlayerComputerChoiceDiv.style.display = 'none';
+  playerComputerOptionTextContainer.classList.add("d-none")
 };
 
 const closeRulesBtnFunc = () => {

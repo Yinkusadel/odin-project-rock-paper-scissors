@@ -97,7 +97,7 @@ main {
   position: relative;
   justify-content: center;
   align-items: center;
-  display: flex;
+  display: flex; /* return to display flex */
 }
 
 .svg-triangle-container {
@@ -230,7 +230,8 @@ main {
   left: 15%;
   right: 15%;
   top: 25%;
-  height: 60%;
+  height: 400px;
+  width: 300px;
   background-color: #eee;
   display: flex;
   flex-direction: column;
@@ -238,6 +239,7 @@ main {
   padding: 2rem;
   transition: all 0.5s ease-out;
   border-radius: 10px;
+  margin: auto;
 }
 
 .display-rules-heading {
@@ -257,8 +259,30 @@ main {
   min-height: 28rem;
   margin: auto;
   color: #dc2e4e;
-  display: none;
+  display: none; /* return to display none */
   position: relative;
+}
+
+.player-computer-option-text-containner {
+  min-height: 50px;
+  font-size: 2em;
+  width: 60%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  color: #f3e7e7;
+}
+
+.player-picked-text {
+  width: 45%;
+  display: flex;
+}
+
+.computer-picked-text {
+  width: 45%;
+  display: flex;
+  justify-content: flex-end;
 }
 
 .after-player-and-computer-choice-game {
