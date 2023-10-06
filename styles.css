@@ -570,4 +570,37 @@ main {
     margin-top: 220px;
     justify-content: center;
   }
+
+  .display-rules {
+    position: fixed;
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+  }
+
+  .display-rules-heading {
+    font-size: 2rem;
+    color: #475077;
+    position: absolute;
+    left: 45%;
+  }
+
+  .close-rules-icon {
+    margin-bottom: 10px;
+    position: absolute;
+    left: 50%;
+  }
+
+  .rules-regulation-svg {
+    width: 100%;
+    justify-content: center;
+    display: flex;
+  }
 }
