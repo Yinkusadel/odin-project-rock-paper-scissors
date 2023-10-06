@@ -46,43 +46,39 @@ const playerComputerOptionTextContainer = document.querySelector(
   '.player-computer-option-text-containner',
 );
 
-const playerOptionText = document.querySelector(
-  '.player-option-text',
-);
+const playerOptionText = document.querySelector('.player-option-text');
 
-const computerOptionText = document.querySelector(
-  '.computer-option-text',
-);
+const computerOptionText = document.querySelector('.computer-option-text');
 
 const playerRockTextContent = () => {
-  playerOptionText.textContent = "Rock"
-  playerComputerOptionTextContainer.classList.remove("d-none")
-}
+  playerOptionText.textContent = 'Rock';
+  playerComputerOptionTextContainer.classList.remove('d-none');
+};
 
 const playerPaperTextContent = () => {
-  playerOptionText.textContent = "Paper"
-  playerComputerOptionTextContainer.classList.remove("d-none")
-}
+  playerOptionText.textContent = 'Paper';
+  playerComputerOptionTextContainer.classList.remove('d-none');
+};
 
 const playerScissorsTextContent = () => {
-  playerOptionText.textContent = "Scissors"
-  playerComputerOptionTextContainer.classList.remove("d-none")
-}
+  playerOptionText.textContent = 'Scissors';
+  playerComputerOptionTextContainer.classList.remove('d-none');
+};
 
 const computerRockTextContent = () => {
-  computerOptionText.textContent = "Rock"
-  playerComputerOptionTextContainer.classList.remove("d-none")
-}
+  computerOptionText.textContent = 'Rock';
+  playerComputerOptionTextContainer.classList.remove('d-none');
+};
 
 const computerPaperTextContent = () => {
-  computerOptionText.textContent = "Paper"
-  playerComputerOptionTextContainer.classList.remove("d-none")
-}
+  computerOptionText.textContent = 'Paper';
+  playerComputerOptionTextContainer.classList.remove('d-none');
+};
 
 const computerScissorsTextContent = () => {
-  computerOptionText.textContent = "Scissors"
-  playerComputerOptionTextContainer.classList.remove("d-none")
-}
+  computerOptionText.textContent = 'Scissors';
+  playerComputerOptionTextContainer.classList.remove('d-none');
+};
 
 const choiceOptions = ['rock', 'paper', 'scissors'];
 let randomChoice = '';
@@ -165,7 +161,7 @@ const playRoundForRock = () => {
     return 'YOU WIN';
   }
   if (player === 'rock' && computer === 'paper') {
-    playerRockTextContent()
+    playerRockTextContent();
     computerPaperTextContent();
     changeComPaper();
     computerScore.textContent = `${(computerGoal += 1)}`;
@@ -247,7 +243,7 @@ const getPlayerPaper = () => {
 const playAgain = () => {
   gameBodyDiv.style.display = 'flex';
   afterPlayerComputerChoiceDiv.style.display = 'none';
-  playerComputerOptionTextContainer.classList.add("d-none")
+  playerComputerOptionTextContainer.classList.add('d-none');
 };
 
 const closeRulesBtnFunc = () => {

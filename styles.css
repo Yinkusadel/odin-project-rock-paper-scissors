@@ -9,7 +9,7 @@ body {
   background-image: linear-gradient(hsl(214deg 47% 23%), hsl(237deg 49% 15%));
   background-size: cover;
   background-repeat: no-repeat;
-  min-height: 100vh;
+  min-height: 120vh;
   font-family: 'Barlow Semi Condensed', sans-serif;
 }
 
@@ -97,7 +97,7 @@ main {
   position: relative;
   justify-content: center;
   align-items: center;
-  display: flex; /* return to display flex */
+  display: flex;
 }
 
 .svg-triangle-container {
@@ -259,7 +259,7 @@ main {
   min-height: 28rem;
   margin: auto;
   color: #dc2e4e;
-  display: none; /* return to display none */
+  display: none;
   position: relative;
 }
 
@@ -527,4 +527,47 @@ main {
 
 .d-flex {
   display: flex;
+}
+
+@media screen and (width <= 767px) {
+  .player-computer-option-text-containner {
+    font-size: 1.1em;
+    top: 90%;
+    left: 20%;
+    position: absolute;
+  }
+
+  .display-winner-win-or-lose-content {
+    position: absolute;
+    top: 60%;
+    width: 100%;
+  }
+
+  .after-player-and-computer-choice-game-container {
+    margin: auto;
+  }
+
+  .change-scissors-circle-border {
+    height: 30%;
+    width: 70%;
+  }
+
+  .change-rock-circle-border {
+    height: 30%;
+    width: 70%;
+  }
+
+  .change-paper-circle-border {
+    height: 30%;
+    width: 70%;
+  }
+
+  .after-player-and-computer-choice-game {
+    min-height: 35rem;
+  }
+
+  .rules-btn-container {
+    margin-top: 220px;
+    justify-content: center;
+  }
 }
