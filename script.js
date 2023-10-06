@@ -208,8 +208,9 @@ const getPlayerRock = () => {
   playerSvgRock.setAttribute('d', dPathRock);
   gameBodyBigCirclePlayerOptionBorder.setAttribute('class', 'change-rock-circle-border');
 
-  gameBodyDiv.style.display = 'none';
-  afterPlayerComputerChoiceDiv.style.display = 'block';
+  gameBodyDiv.classList.remove('d-flex');
+  gameBodyDiv.classList.add('d-none');
+  afterPlayerComputerChoiceDiv.classList.remove('d-none');
   winLoseText.textContent = playRoundForRock();
 };
 
@@ -221,8 +222,9 @@ const getPlayerScissors = () => {
   playerSvgRock.setAttribute('d', dPathScissors);
   gameBodyBigCirclePlayerOptionBorder.setAttribute('class', 'change-scissors-circle-border');
 
-  gameBodyDiv.style.display = 'none';
-  afterPlayerComputerChoiceDiv.style.display = 'block';
+  gameBodyDiv.classList.remove('d-flex');
+  gameBodyDiv.classList.add('d-none');
+  afterPlayerComputerChoiceDiv.classList.remove('d-none');
   winLoseText.textContent = playRoundForScissors();
 };
 
@@ -234,24 +236,25 @@ const getPlayerPaper = () => {
   playerSvgRock.setAttribute('d', dPathPaper);
   gameBodyBigCirclePlayerOptionBorder.setAttribute('class', 'change-paper-circle-border');
 
-  gameBodyDiv.style.display = 'none';
-  afterPlayerComputerChoiceDiv.style.display = 'block';
+  gameBodyDiv.classList.remove('d-flex');
+  gameBodyDiv.classList.add('d-none');
+  afterPlayerComputerChoiceDiv.classList.remove('d-none');
 
   winLoseText.textContent = playRoundForPaper();
 };
 
 const playAgain = () => {
-  gameBodyDiv.style.display = 'flex';
-  afterPlayerComputerChoiceDiv.style.display = 'none';
+  gameBodyDiv.classList.add('d-flex');
+  afterPlayerComputerChoiceDiv.classList.add('d-none');
   playerComputerOptionTextContainer.classList.add('d-none');
 };
 
 const closeRulesBtnFunc = () => {
-  closeRulesBtn.style.display = 'none';
+  closeRulesBtn.classList.add('d-none');
 };
 
 const openRulesBtnFunc = () => {
-  openRulesBtn.style.display = 'block';
+  openRulesBtn.classList.remove('d-none');
 };
 
 const closeRules = document.querySelector('.close-rules-icon');

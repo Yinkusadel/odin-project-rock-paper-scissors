@@ -97,7 +97,6 @@ main {
   position: relative;
   justify-content: center;
   align-items: center;
-  display: flex;
 }
 
 .svg-triangle-container {
@@ -221,10 +220,6 @@ main {
   border-radius: 5px;
 }
 
-.display-rules-container {
-  display: none;
-}
-
 .display-rules {
   position: fixed;
   left: 15%;
@@ -259,7 +254,6 @@ main {
   min-height: 28rem;
   margin: auto;
   color: #dc2e4e;
-  display: none;
   position: relative;
 }
 
