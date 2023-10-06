@@ -208,8 +208,7 @@ const getPlayerRock = () => {
   playerSvgRock.setAttribute('d', dPathRock);
   gameBodyBigCirclePlayerOptionBorder.setAttribute('class', 'change-rock-circle-border');
 
-  gameBodyDiv.classList.remove('d-flex');
-  gameBodyDiv.classList.add('d-none');
+  gameBodyDiv.classList.replace('d-flex', 'd-none');
   afterPlayerComputerChoiceDiv.classList.remove('d-none');
   winLoseText.textContent = playRoundForRock();
 };
@@ -222,8 +221,7 @@ const getPlayerScissors = () => {
   playerSvgRock.setAttribute('d', dPathScissors);
   gameBodyBigCirclePlayerOptionBorder.setAttribute('class', 'change-scissors-circle-border');
 
-  gameBodyDiv.classList.remove('d-flex');
-  gameBodyDiv.classList.add('d-none');
+  gameBodyDiv.classList.replace('d-flex', 'd-none');
   afterPlayerComputerChoiceDiv.classList.remove('d-none');
   winLoseText.textContent = playRoundForScissors();
 };
@@ -236,8 +234,7 @@ const getPlayerPaper = () => {
   playerSvgRock.setAttribute('d', dPathPaper);
   gameBodyBigCirclePlayerOptionBorder.setAttribute('class', 'change-paper-circle-border');
 
-  gameBodyDiv.classList.remove('d-flex');
-  gameBodyDiv.classList.add('d-none');
+  gameBodyDiv.classList.replace('d-flex', 'd-none');
   afterPlayerComputerChoiceDiv.classList.remove('d-none');
 
   winLoseText.textContent = playRoundForPaper();
